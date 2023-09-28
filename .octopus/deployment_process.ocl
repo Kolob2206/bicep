@@ -18,7 +18,7 @@ step "deploy-a-bicep-template" {
             resourceGroupLocation = "west-au"
 
             templateSource {
-                sourceCode = "hi"
+                sourceCode = "hi okay"
                 type = "sourceCode"
             }
         }
