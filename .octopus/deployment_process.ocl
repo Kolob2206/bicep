@@ -1,0 +1,26 @@
+step "deploy-a-bicep-template" {
+    name = "Deploy a Bicep template"
+    package_requirement = "AfterPackageAcquisition"
+
+    action {
+        action_type = "deploy-a-bicep-template"
+        properties = {
+            Octopus.Action.RunOnServer = "true"
+        }
+        step_package_version = "1.0.2"
+        worker_pool_variable = ""
+
+        inputs {
+            account = "Accounts-1603"
+            isCompleteMode = false
+            name = "Deploy a Bicep Template"
+            resourceGroup = "kenny-rg"
+            resourceGroupLocation = "west-au"
+
+            templateSource {
+                sourceCode = "hi"
+                type = "sourceCode"
+            }
+        }
+    }
+}
